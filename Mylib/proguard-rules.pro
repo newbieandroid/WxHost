@@ -1,0 +1,2 @@
+-keep class com.csl.lib.loadingview.** { *; }
+-keep class com.csl.lib.loadingview.indicators.** { *; }

@@ -105,5 +105,47 @@
 #======================================================================通用结束
 
 
-#权限请求框架
--dontwarn com.yanzhenjie.permission.**
+
+
+#数据库
+-keep class org.litepal.** {
+    *;
+}
+
+-keep class * extends org.litepal.crud.DataSupport {
+    *;
+}
+
+-keep class * extends org.litepal.crud.LitePalSupport {
+    *;
+}
+
+
+
+
+# Okio
+-dontwarn com.squareup.**
+-dontwarn okio.**
+-keep public class org.codehaus.* { *; }
+-keep public class java.nio.* { *; }
+#okhttp
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep class com.squareup.okhttp.** { *; }
+-keep interface com.squareup.okhttp.** { *; }
+-keep class okhttp3.** { *; }
+-keep interface okhttp3.** { *; }
+-dontwarn com.squareup.okhttp.**
+
+
+#fastjson
+-dontwarn com.alibaba.fastjson.**
+-keep class com.alibaba.fastjson.**{*; }
+
+
+
+
+
+
+
+
