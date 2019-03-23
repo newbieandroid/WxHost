@@ -16,14 +16,10 @@ public abstract class MyDialog extends Dialog {
 
     public MyDialog(@NonNull Context context) {
         super(context, R.style.alert_dialog);
-    }
-
-    public MyDialog(@NonNull Context context, int themeResId) {
-        super(context, R.style.alert_dialog);
-
         setCancelable(isCancleable());
         setCanceledOnTouchOutside(false);
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
